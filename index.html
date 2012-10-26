@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Never Gonna Run Around</title>
+		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			body {
+				margin: 0;
+				font-family: 'Yanone Kaffeesatz', sans-serif;
+			}
+			h1 {
+				margin: 50px -20px 0;
+				padding: 0;
+				font-size: 36px;
+				text-align: center;
+			}
+			#main {
+				width: 316px;
+				margin: 0 auto;
+				padding: 0;
+			}
+			#rick {
+				height: 316px;
+				margin: 50px 0 0 0;
+
+				background-image: url(rick.png);
+				background-repeat: no-repeat;
+			}
+			p {
+				margin: 15px -40px;
+				text-align: center;
+				line-height: 16px;
+			}
+			strong {
+				margin: 0 5px;
+			}
+			img {
+				margin: 0 5px 0 15px;
+			}
+			a {
+				margin: 0 0 0 20px;
+				color: #999;
+				text-decoration: none;
+			}
+			a span {
+				vertical-align: bottom;
+				display: inline-block;
+				height: 16px;
+				width: 20px;
+
+				background-image: url(duedil.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+			}
+			a:hover span {
+				background-position: 0 -16px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function()
+			{
+				var rick = document.getElementById('rick');
+
+				var h = Math.random()*360, s = 65, l = 34;
+				var d = 0.4;
+
+				setInterval(function() {
+					h = (h + d) % 360;
+					rick.style.backgroundColor = "hsl("+Math.round(h)+", "+s+"%, "+l+"%)";
+				}, 10);
+			};
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="rick"></div>
+			<h1>Never Gonna Run Around</h1>
+			<p>
+				a <strong>Never Gonna Let You Down Limited</strong> production
+				<a href="http://data.companieshouse.gov.uk/doc/company/SC435597"><span id="duedil"></span> SC435597</a>
+			</p>
+		</div>
+	</body>
+</html>
